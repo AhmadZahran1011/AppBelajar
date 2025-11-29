@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modul Surat Lamaran — Index</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Modul Pembelajaran: Surat Lamaran Pekerjaan</h1>
+  </header>
+
+  <nav class="nav">
+    <button class="nav-btn active" data-target="modul1">Pendahuluan</button>
+    <button class="nav-btn" data-target="modul2">Materi</button>
+    <button class="nav-btn" data-target="modul3">Latihan</button>
+    <button class="nav-btn" data-target="modul4">Menulis</button>
+    <button class="nav-btn" data-target="rekap">Rekap Nilai</button>
+  </nav>
+
+  <main class="container">
+    <section id="modul1" class="panel active">
+      <h2>Pendahuluan & Tujuan Pembelajaran</h2>
+      <p class="muted">Kompetensi dasar: memahami struktur dan bahasa surat lamaran pekerjaan.</p>
+      <ul>
+        <li>Mengenali bagian surat lamaran.</li>
+        <li>Membedakan contoh baik dan buruk.</li>
+        <li>Menyusun paragraf secara logis.</li>
+      </ul>
+    </section>
+
+    <section id="modul2" class="panel">
+      <h2>Materi Interaktif</h2>
+      <div class="card">
+        <h3>Video Narasi</h3>
+        <div class="video-placeholder">[embed atau ganti src pada index]</div>
+      </div>
+      <div class="card">
+        <h3>Infografik</h3>
+        <div id="infographic"></div>
+      </div>
+    </section>
+
+    <section id="modul3" class="panel">
+      <h2>Latihan & Quiz</h2>
+      <div id="quizArea"></div>
+      <div class="card">
+        <button id="startQuiz">Mulai Quiz</button>
+      </div>
+    </section>
+
+    <section id="modul4" class="panel">
+      <h2>Modul Menulis (Editor)</h2>
+      <textarea id="editor" placeholder="Tulis surat di sini..."></textarea>
+      <div class="actions">
+        <button id="checkGrammar">Cek Grammar</button>
+        <button id="saveDraft">Simpan Draf</button>
+      </div>
+      <div id="grammarResults"></div>
+    </section>
+
+    <section id="rekap" class="panel">
+      <h2>Rekap Nilai</h2>
+      <div id="rekapArea">Belum ada hasil.</div>
+      <div class="card">
+        <button id="exportResults">Ekspor Hasil (JSON)</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="quiz_data.js"></script>
+  <script src="ai_service.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
