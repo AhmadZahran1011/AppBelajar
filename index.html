@@ -6,11 +6,14 @@
   <title>Modul Surat Lamaran — Index</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <!-- ===================== HEADER ===================== -->
   <header>
     <h1>Modul Pembelajaran: Surat Lamaran Pekerjaan</h1>
   </header>
 
+  <!-- ===================== NAVIGATION ===================== -->
   <nav class="nav">
     <button class="nav-btn active" data-target="modul1">Pendahuluan</button>
     <button class="nav-btn" data-target="modul2">Materi</button>
@@ -19,58 +22,153 @@
     <button class="nav-btn" data-target="rekap">Rekap Nilai</button>
   </nav>
 
+  <!-- ===================== MAIN CONTENT ===================== -->
   <main class="container">
+
+    <!-- ===== Modul 1 — Pendahuluan ===== -->
     <section id="modul1" class="panel active">
       <h2>Pendahuluan & Tujuan Pembelajaran</h2>
-      <p class="muted">Kompetensi dasar: memahami struktur dan bahasa surat lamaran pekerjaan.</p>
+      <p class="muted">
+        Kompetensi Dasar (KD): Memahami struktur dan bahasa surat lamaran pekerjaan (Bahasa Indonesia SMK).
+      </p>
+
+      <h3>Tujuan Pembelajaran</h3>
       <ul>
-        <li>Mengenali bagian surat lamaran.</li>
-        <li>Membedakan contoh baik dan buruk.</li>
-        <li>Menyusun paragraf secara logis.</li>
+        <li>Siswa mampu memahami fungsi surat lamaran pekerjaan.</li>
+        <li>Siswa mampu mengidentifikasi struktur surat lamaran.</li>
+        <li>Siswa mampu menulis surat lamaran sesuai kaidah bahasa Indonesia.</li>
+        <li>Siswa mampu menyesuaikan isi surat berdasarkan lowongan pekerjaan.</li>
       </ul>
+
+      <h3>Peta Konsep (Mind Map)</h3>
+      <div class="card">
+        <div id="mindmap"></div>
+      </div>
+
+      <div class="card">
+        <p><b>Gambaran Umum:</b> Surat lamaran ➜ Struktur ➜ Bahasa formal ➜ Etika ➜ Praktik menulis.</p>
+      </div>
     </section>
 
+    <!-- ===== Modul 2 — Materi Lengkap ===== -->
     <section id="modul2" class="panel">
       <h2>Materi Interaktif</h2>
+
+      <!-- Video -->
       <div class="card">
-        <h3>Video Narasi</h3>
-        <div class="video-placeholder">[embed atau ganti src pada index]</div>
+        <h3>Video Pengantar</h3>
+
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/rKCMCedNwlg?si=KSSM4wdxg2zrRB5m"
+            title="Video Materi Surat Lamaran"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
+
+      <!-- Pengertian -->
       <div class="card">
-        <h3>Infografik</h3>
+        <h3>Pengertian Surat Lamaran Pekerjaan</h3>
+        <p>Surat resmi yang dibuat untuk melamar pekerjaan pada sebuah perusahaan atau instansi.</p>
+
+        <h4>Tujuan:</h4>
+        <ul>
+          <li>Memperkenalkan diri kepada perusahaan.</li>
+          <li>Menyampaikan minat terhadap posisi pekerjaan.</li>
+          <li>Meyakinkan HRD agar memanggil untuk wawancara.</li>
+        </ul>
+      </div>
+
+      <!-- Struktur -->
+      <div class="card">
+        <h3>Struktur Surat Lamaran Pekerjaan</h3>
+        <table class="structure-table">
+          <tr><th>Bagian</th><th>Penjelasan</th><th>Contoh</th></tr>
+          <tr><td>Tempat & tanggal</td><td>Menunjukkan waktu penulisan surat</td><td>“Bandung, 30 November 2025”</td></tr>
+          <tr><td>Alamat tujuan</td><td>Ditujuan kepada pihak perusahaan</td><td>“Yth. HRD PT Maju Jaya”</td></tr>
+          <tr><td>Salam pembuka</td><td>Pembuka sopan</td><td>“Dengan hormat,”</td></tr>
+          <tr><td>Paragraf pembuka</td><td>Sumber lowongan</td><td>“Berdasarkan informasi dari JobStreet...”</td></tr>
+          <tr><td>Paragraf isi</td><td>Identitas & keahlian</td><td>“Saya, Andi Saputra…”</td></tr>
+          <tr><td>Paragraf penutup</td><td>Harapan & ucapan terima kasih</td><td>“Besar harapan saya...”</td></tr>
+          <tr><td>Penutup & tanda tangan</td><td>Kesan profesional</td><td>“Hormat saya, …”</td></tr>
+        </table>
+      </div>
+
+      <!-- Infografik -->
+      <div class="card">
+        <h3>Infografik Animasi Struktur Surat</h3>
         <div id="infographic"></div>
+      </div>
+
+      <!-- Ciri Kebahasaan -->
+      <div class="card">
+        <h3>Ciri Kebahasaan</h3>
+        <ul>
+          <li>Bahasa formal & baku.</li>
+          <li>Kalimat efektif dan sopan.</li>
+          <li>Tidak menggunakan singkatan tidak resmi.</li>
+          <li>Kohesi dan koherensi terjaga.</li>
+          <li>Sesuai PUEBI.</li>
+        </ul>
+      </div>
+
+      <!-- Referensi -->
+      <div class="card">
+        <h3>Referensi Akademik</h3>
+        <ul>
+          <li>Kemdikbud (2022). Kurikulum Merdeka SMK.</li>
+          <li>Mahsun (2020). Pembelajaran Bahasa Indonesia Berbasis Teks.</li>
+          <li>Nurgiyantoro (2018). Penilaian Pembelajaran Bahasa.</li>
+          <li>Badan Bahasa (2021). PUEBI.</li>
+          <li>Saryono (2020). Menulis Surat Lamaran Profesional.</li>
+        </ul>
       </div>
     </section>
 
+    <!-- ===== Modul 3 ===== -->
     <section id="modul3" class="panel">
       <h2>Latihan & Quiz</h2>
+
       <div id="quizArea"></div>
+
       <div class="card">
         <button id="startQuiz">Mulai Quiz</button>
       </div>
     </section>
 
+    <!-- ===== Modul 4 ===== -->
     <section id="modul4" class="panel">
       <h2>Modul Menulis (Editor)</h2>
+
       <textarea id="editor" placeholder="Tulis surat di sini..."></textarea>
+
       <div class="actions">
         <button id="checkGrammar">Cek Grammar</button>
         <button id="saveDraft">Simpan Draf</button>
       </div>
+
       <div id="grammarResults"></div>
     </section>
 
+    <!-- ===== Rekap Nilai ===== -->
     <section id="rekap" class="panel">
       <h2>Rekap Nilai</h2>
+
       <div id="rekapArea">Belum ada hasil.</div>
+
       <div class="card">
         <button id="exportResults">Ekspor Hasil (JSON)</button>
       </div>
     </section>
+
   </main>
 
+  <!-- ===================== SCRIPTS ===================== -->
   <script src="quiz_data.js"></script>
   <script src="ai_service.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>
