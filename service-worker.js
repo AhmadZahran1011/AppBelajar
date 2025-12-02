@@ -1,17 +1,17 @@
 const CACHE_NAME = "hutan-kartun-v1";
 
 const ASSETS = [
-  "/", 
-  "/index.html",
-  "/style.css",
-  "/app.js",
+  "./", 
+  "./index.html",
+  "./style.css",
+  "./app.js",
 
   // karakter ayam
-  "/img/chicken-walking.gif",
+  "./chicken-walking.gif",
 
   // ikon pwa
-  "/icon-192.png",
-  "/icon-512.png"
+  "./icon-192.png",
+  "./icon-512.png"
 ];
 
 // Install SW → cache semua asset
@@ -41,3 +41,4 @@ self.addEventListener("activate", (event) => {
     })
   );
 });
+
