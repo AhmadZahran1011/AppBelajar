@@ -158,19 +158,6 @@ textarea#editor{
 }
 .drag-item.dragging{opacity:0.4;transform:scale(.98)}
 
-/* ===== Background Layer ===== */
-.bg-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat-x;
-  background-size: cover;
-  z-index: -10;
-  animation: slideBg 40s linear infinite;
-}
-
 
 /* Parallax Background Animation */
 @keyframes slideBg {
@@ -180,13 +167,14 @@ textarea#editor{
 
 /* ===== Karakter Ayam Berjalan ===== */
 .character {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   left: -150px;
   width: 120px;
-  z-index: 50;
+  z-index: 5; /* tidak menghalangi header */
   animation: walkAcross 25s linear infinite;
 }
+
 
 .character img {
   width: 120px;
