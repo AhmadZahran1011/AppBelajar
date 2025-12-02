@@ -5,9 +5,37 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Modul Surat Lamaran — Index</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- iOS support -->
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="theme-color" content="#1E63FF">
 </head>
 
 <body>
+  <button id="installPWA" style="
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 12px 20px;
+  background: #1E63FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none;
+  z-index: 9999;
+">
+  Install Aplikasi
+</button>
+
+
+  <div class="character">
+    <img src="chicken-walking.gif" alt="Ayam berjalan">
+  </div>
+
   <!-- ===================== HEADER ===================== -->
   <header>
     <h1>Modul Pembelajaran: Surat Lamaran Pekerjaan</h1>
@@ -162,18 +190,48 @@
         <button id="exportResults">Ekspor Hasil (JSON)</button>
       </div>
     </section>
+
     
+
   </main>
 
   <!-- ===================== SCRIPTS ===================== -->
   <script src="quiz_data.js"></script>
   <script src="ai_service.js"></script>
   <script src="app.js"></script>
-     <div class="character">
-        <img src="chicken-walking.gif" alt="Ayam berjalan">
-     </div>
 
-    
+  <script>
+  // ================== REGISTER SERVICE WORKER ==================
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker terdaftar"))
+      .catch(err => console.log("SW gagal:", err));
+  }
+
+  // ================== INSTALL BUTTON ==================
+  let deferredPrompt;
+  const installBtn = document.getElementById("installPWA");
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = "block"; // show install button
+  });
+
+  installBtn.addEventListener("click", async () => {
+    installBtn.style.display = "none";
+    deferredPrompt.prompt();
+
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log("User memilih:", outcome);
+
+    deferredPrompt = null;
+  });
+
+  window.addEventListener("appinstalled", () => {
+    console.log("Aplikasi PWA telah diinstall");
+  });
+</script>
 
 </body>
 </html> 
