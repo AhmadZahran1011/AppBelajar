@@ -158,5 +158,46 @@ textarea#editor{
 }
 .drag-item.dragging{opacity:0.4;transform:scale(.98)}
 
+/* ===== Background Layer ===== */
+.bg-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-size: cover;
+  z-index: -10;
+  animation: slideBg 40s linear infinite;
+}
+
+
+/* Parallax Background Animation */
+@keyframes slideBg {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ===== Karakter Ayam Berjalan ===== */
+.character {
+  position: fixed;
+  bottom: 20px;
+  left: -150px;
+  width: 120px;
+  z-index: 50;
+  animation: walkAcross 25s linear infinite;
+}
+
+.character img {
+  width: 120px;
+}
+
+/* Ayam berjalan dari kiri → kanan */
+@keyframes walkAcross {
+  from { transform: translateX(0); }
+  to   { transform: translateX(120vw); }
+}
+
+
 /* ANIMATIONS */
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}} 
